@@ -137,11 +137,11 @@
 
     <build>
 
-        <sourceDirectory>src</sourceDirectory>
+        <sourceDirectory>basic_files/src</sourceDirectory>
 
         <resources>
             <resource>
-                <directory>src</directory>
+                <directory>basic_files/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
                 </excludes>
