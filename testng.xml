@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Coding Selenium Suite" parallel="false">
+    <test name="All Selenium coding tests">
+        <classes>
+            <class name="coding.selenium_programs.BrowserLaunchTest"/>
+            <class name="coding.selenium_programs.ElementInteractionTest"/>
+            <class name="coding.selenium_programs.NavigationAndWaitTest"/>
+            <class name="coding.selenium_programs.ReusableSeleniumMethodsTest"/>
+        </classes>
+    </test>
+</suite>

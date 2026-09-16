@@ -111,6 +111,18 @@
             <version>${log4j.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jul</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
         <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -137,11 +149,12 @@
 
     <build>
 
-        <sourceDirectory>basic_files/src</sourceDirectory>
+        <sourceDirectory>src</sourceDirectory>
+        <testSourceDirectory>src</testSourceDirectory>
 
         <resources>
             <resource>
-                <directory>basic_files/src</directory>
+                <directory>src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
                 </excludes>
@@ -164,6 +177,12 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.3.1</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                    <argLine>-Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager</argLine>
+                </configuration>
             </plugin>
 
         </plugins>
